@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :focus{
+            outline: 0;
+        }
+
+        input, select {
+            border-radius: 4px;
+            border: solid 1px #1b9aaa;
+            padding: 5px;
+            margin-top: 4px;
+        }
+
+        input:focus, select:focus {
+            border: solid 1px #06d6a0;
+        }
+
+        
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .form-container {
+            display: grid;
+            margin-top: 10px;
+        }
+
+        .btn-form-container,  .two-div-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn-form-container input{
+            color: white;
+            border: solid 2px #f8ffe5;
+            transition: 1s;
+        }
+
+        
+        .btn-form-container input[type="submit"] {
+            background-color: #06d6a0;
+        }
+
+        .btn-form-container input[type="button"] {
+            background-color: #1b9aaa;
+        }
+
+        .btn-form-container input[type="button"]:hover {
+            color: #1b9aaa;
+            border-color: #1b9aaa;
+        }
+
+        .btn-form-container input[type="submit"]:hover {
+            color: #06d6a0;
+            border-color: #06d6a0;
+        }
+
+        .btn-form-container input:hover {
+            background-color: white;
+        }
+
+        .form{
+            width: 60vw;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="container"><h1>Cadastro de Actividades</h1>
+    <form class="form">
+       
+        <div class="form-container">
+            <label>Nome</label>
+            <input type="text" placeholder="Introduza o nome da actividade">
+        </div>
+        <div class="form-container">
+            <label>Percentagem</label>
+            <input type="number" placeholder="Introduza a percentagem equivalente a essa actividade">
+        </div>
+        <div class="two-div-container">
+            <div class="form-container">
+                <label>Data de inicio</label>
+                <input type="date">
+            </div>
+            <div class="form-container">
+                <label>Data de termino</label>
+                <input type="date">
+            </div>
+        </div>
+        <div class="form-container">
+            <label>Nome do responsavel</label> 
+            <input type="text" placeholder="Introduza o nome do responsavel pela fase">
+        </div>
+        <div class="form-container">
+            <label>Contacto do responsavel</label>
+            <input type="tel" placeholder="Introduza o contacto do responsavel">
+        </div>
+        <div class="form-container">
+            <label>Fase</label>
+            <select name="phase" id="phase">
+                <option>As Fases</option>
+            </select>
+        </div>
+        <div class="form-container">
+            <label>Observacao</label>
+            <input type="text" placeholder="Forneca uma descricao do que ira acontecer nessa fase">
+        </div>
+        
+        <div class="btn-form-container">
+            <input type="button" value="Gravar">
+            <input type="submit" value="Submeter">
+        </div>
+    </form></div>
+</body>
+</html>
